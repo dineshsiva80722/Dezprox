@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { TextGenerateEffect } from "@/Components/ui/Textgenerateeffect";
+import { TextGenerateEffect } from "@/Components/ui/text-generate-effect";
 import { motion, AnimatePresence } from "framer-motion";
 
 
@@ -155,7 +155,7 @@ const Whoweare = () => {
           {/* <h1 className="text-[42px] font-semibold text-gray-900 mb-4 mt-2">
            
           </h1> */}
-          <TextGenerateEffect words="Suited for every scenario"  as="h1"  className="text-[42px] font-semibold text-gray-900 mb-4 mt-2"/>
+          <TextGenerateEffect words="Suited for every scenario"  className="text-[42px] font-semibold text-gray-900 mb-4 mt-2"/>
           <div className="text-gray-500 text-lg">
             Explore the comprehensive suite of tools designed to enhance your
           </div>

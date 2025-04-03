@@ -7,7 +7,7 @@ import "swiper/css"
 import "swiper/css/pagination"
 import { ArrowRight } from "lucide-react";
 import "swiper/css/autoplay"
-import { TextGenerateEffect } from "@/Components/ui/Textgenerateeffect";
+import { TextGenerateEffect } from "@/Components/ui/text-generate-effect";
 
 const CustomLogo = () => {
   return (
@@ -86,7 +86,7 @@ export default function TestimonialSection2() {
       <div className="text-center mb-8">
         <p className="text-green-500 font-medium mb-2">Testimonials</p>
         {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Powerful Finance Reporting</h2> */}
-        <TextGenerateEffect words="Powerful Finance Reporting" className="text-3xl md:text-4xl font-bold text-gray-900" as="h1" />
+        <TextGenerateEffect words="Powerful Finance Reporting" className="text-3xl md:text-4xl font-bold text-gray-900"  />
       </div>
 
       {/* Testimonial Content */}

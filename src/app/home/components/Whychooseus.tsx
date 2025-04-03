@@ -94,7 +94,7 @@
 
 "use client";
 import React from "react";
-import { TextGenerateEffect } from "@/Components/ui/Textgenerateeffect";
+import { TextGenerateEffect } from "@/Components/ui/text-generate-effect";
 
 interface Feature {
   icon: string;

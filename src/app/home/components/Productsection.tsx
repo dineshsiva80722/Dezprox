@@ -1,5 +1,5 @@
 import React from "react";
-import { TextGenerateEffect } from "@/Components/ui/Textgenerateeffect";
+import { TextGenerateEffect } from "@/Components/ui/text-generate-effect";
 import Image from "next/image";
 
 const Productsection = () => {
@@ -11,7 +11,7 @@ const Productsection = () => {
           <div className="text-center mb-16">
             <p className="text-green-600 font-medium mb-2">Our Products</p>
             {/* <h1 className="text-4xl md:text-5xl font-bold mb-4">Powerful ERP & Products</h1> */}
-            <TextGenerateEffect words="Powerful ERP & Products" className="text-4xl md:text-5xl font-bold mb-4" as="h1" />
+            <TextGenerateEffect words="Powerful ERP & Products" className="text-4xl md:text-5xl font-bold mb-4" />
             <p className="text-gray-600 max-w-2xl mx-auto">
               We create powerful digital tools designed to streamline businesses and enhance productivity
             </p>
