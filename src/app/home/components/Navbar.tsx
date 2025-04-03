@@ -31,8 +31,8 @@ const Navbar = () => {
           <Link href="/about" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">About Us</Link>
           <Link href="/services" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Services</Link>
           <Link href="/products" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Products</Link>
-          <Link href="/Careers" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Careers</Link>
-          <Link href="/Contact_Us" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Contact Us</Link>
+          <Link href="/careers" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Careers</Link>
+          <Link href="/contect" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">Contact Us</Link>
         </div>
 
         {/* CTA Button - Desktop */}
