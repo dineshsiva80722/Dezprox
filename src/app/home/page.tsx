@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Page = () => {
+const page = () => {
   return (
-    <div className='bg-zinc-500 min-h-screen flex items-center justify-center text-center font-bold '>
-      hello
-    </div>
+    <div className='min-h-screen bg-zinc-500 text-white font-bold text-center flex justify-center items-center'>vercel</div>
   )
 }
-export default Page
+export default page

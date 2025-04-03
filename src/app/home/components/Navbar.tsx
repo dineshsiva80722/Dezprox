@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/Components/ui/button';
+import Image from "next/image";
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
 
-        <img src="/Company_Logo.png" alt="Company Logo" className="h-8 w-auto sm:h-10" />
+        <Image width={100} height={100} src="/Company_Logo.png" alt="Company Logo" className="h-8 w-auto sm:h-10" />
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
@@ -64,7 +65,7 @@ const Navbar = () => {
                 </clipPath>
               </defs>
             </svg>
-            <span>Let's Talk</span>
+            <span>Let&apos;s Talk</span>
           </Button>
         </div>
       </div>
