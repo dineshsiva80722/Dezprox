@@ -113,8 +113,7 @@ import "@fontsource/outfit";
 import Link from "next/link";
 import { Button } from "@/Components/ui/button";
 import { motion } from "framer-motion";
-// import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { Outfit } from "next/font/google";
+
 
 
 

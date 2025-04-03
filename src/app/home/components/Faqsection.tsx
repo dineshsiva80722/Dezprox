@@ -177,7 +177,7 @@ const FaqSection: React.FC = () => {
         In Case You <br /> Missed anything?
       </h2>
       <p className="text-[rgba(80,86,93,1)] text-[17px] font-normal leading-[1.4] text-center mt-4 mb-8">
-        We've Got Answers!
+        We&apos;ve Got Answers!
       </p>
       <a
         href="#"

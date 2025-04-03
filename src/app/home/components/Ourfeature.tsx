@@ -1,12 +1,7 @@
-// components/TrustBadges.jsx
+
 import React from 'react';
 
 
-interface Badge {
-  id: string;
-  title: string;
-  subtitle: string;
-}
 const Ourfeature = () => {
   const badges = [
     {

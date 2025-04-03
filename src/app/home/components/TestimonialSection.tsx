@@ -164,7 +164,7 @@ export default function TestimonialSection2() {
                             </svg>
                           ))}
                         </div>
-                        <p className="text-xs  sm:text-sm text-gray-700 mb-4">"{testimonial.review}"</p>
+                        <p className="text-xs  sm:text-sm text-gray-700 mb-4">{testimonial.review}</p>
                         <div className="w-auto h-1 bg-gray-300 mb-2 sm:mb-6" />
                         <div className="flex items-center justify-evenly">
                           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden mr-3">
