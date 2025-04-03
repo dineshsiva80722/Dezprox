@@ -141,7 +141,7 @@ const BenefitsSection = () => {
                 <TextGenerateEffect className="text-3xl md:text-4xl font-bold text-black/80 mb-4" words="Why join us" />
                 <p className="text-gray-600 max-w-2xl mx-auto">
                     We believe that taking care of our team is essential to our success.
-                    That's why we offer a comprehensive range of perks and benefits.
+                    That&apos;s why we offer a comprehensive range of perks and benefits.
                 </p>
             </div>
 
