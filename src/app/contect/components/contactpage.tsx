@@ -27,11 +27,11 @@ const ContactPage = () => {
   return (
     <div className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="text-center mb-12">
-        <p className="text-green-600 mb-4  text-lg font-medium">Let's Connect</p>
+        <p className="text-green-600 mb-4  text-lg font-medium">Let&apos;s Connect</p>
         {/* <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Let's Build Together</h1> */}
         <TextGenerateEffect words="Let's Build Together" className="text-4xl md:text-5xl font-bold text-black mb-4"/>
         <p className="text-gray-600 max-w-2xl md:text-xl mx-auto">
-          We're here to collaborate, create, and deliver top-notch digital 
+          We&apos;re here to collaborate, create, and deliver top-notch digital 
           solutions tailored to your needs.
         </p>
       </div>
@@ -48,7 +48,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-black">Email Us</h3>
-                <p className="text-gray-600">Facing technical challenges or product concerns? We're here to assist</p>
+                <p className="text-gray-600">Facing technical challenges or product concerns? We&apos;re here to assist</p>
               </div>
             </div>
             <p className="text-black underline font-medium">alter@support.com</p>
@@ -63,7 +63,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-black">Contact Sales</h3>
-                <p className="text-gray-600">Let's collaborate on custom solutions or discuss product insights</p>
+                <p className="text-gray-600">Let&apos;s collaborate on custom solutions or discuss product insights</p>
               </div>
             </div>
             <a href="#" className="text-black underline font-medium">Book a call</a>
@@ -78,7 +78,7 @@ const ContactPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-          <h2 className="text-2xl font-semibold text-center text-black mb-6">We'd love to help! Let us know how</h2>
+          <h2 className="text-2xl font-semibold text-center text-black mb-6">We&apos;re love to help! Let us know how</h2>
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>

@@ -146,8 +146,8 @@ const Openroles = () => {
             <TextGenerateEffect words=" Open Roles"  className="text-[#020A0F] md:text-5xl text-2xl font-semibold leading-none max-md:text-6xl max-sm:text-[40px]"/>
           </div>
           <div className="text-[#50565D] text-xl font-normal leading-[38px] max-w-[821px] mx-auto my-0 max-md:text-2xl max-md:leading-8 max-sm:text-xl max-sm:leading-7">
-            Whether you're a creative thinker, a tech enthusiast, or a strategic
-            problem-solver, there's a place for you here.
+            Whether you&apos;re a creative thinker, a tech enthusiast, or a strategic
+            problem-solver, there&apos;s a place for you here.
           </div>
         </div>
 
