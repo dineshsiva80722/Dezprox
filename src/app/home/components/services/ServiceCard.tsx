@@ -89,7 +89,7 @@
 
 "use client";
 import React from 'react';
-import { Card } from '@/components/ui/card';
+import { Card } from '@/Components/ui/card';
 
 interface Service {
   number: string;
