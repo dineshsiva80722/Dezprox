@@ -3,6 +3,7 @@ import Herosection from './components/Herosection'
 import Ourfeature from './components/Ourfeature'
 import Aboutsection from './components/Aboutsection'
 import Whoweare from './components/Whoweare'
+import ServicesSection from './components/Servicessection'
 import Productsection from './components/Productsection'
 import Whychooseus from './components/Whychooseus'
 import Testimonialsection from './components/TestimonialSection'
@@ -15,6 +16,7 @@ const Page = () => {
       <Ourfeature />
       <Aboutsection />
       <Whoweare />
+      <ServicesSection/>
       <Productsection />
       <Whychooseus />
       <Testimonialsection />
