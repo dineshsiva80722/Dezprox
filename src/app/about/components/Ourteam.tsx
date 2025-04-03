@@ -5,10 +5,9 @@ interface TeamMemberProps {
   name: string;
   title: string;
   bgColor: string;
-  image: string;
 }
 
-const TeamMember = ({ name, title, bgColor, image }: TeamMemberProps) => {
+const TeamMember = ({ name, title, bgColor }: TeamMemberProps) => {
   return (
     <div className={`rounded-3xl p-6 ${bgColor} flex flex-col items-center`}>
       <div className="rounded-full w-24 h-24 mb-6 flex items-center justify-center overflow-hidden">
@@ -81,8 +80,6 @@ const Ourteam = () => {
             name={member.name}
             title={member.title}
             bgColor={member.bgColor}
-            image={member.image}
-        
           />
         ))}
       </div>
