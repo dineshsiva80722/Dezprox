@@ -6,17 +6,18 @@ import { cn } from "@/lib/utils";
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
-  let colors = [
-    "#93c5fd",
-    "#f9a8d4",
-    "#86efac",
-    "#fde047",
-    "#fca5a5",
-    "#d8b4fe",
-    "#93c5fd",
-    "#a5b4fc",
-    "#c4b5fd",
+  const colors = [
+    "#f0fdf4",  // Very light green (50)
+    "#dcfce7",  // Light green (100)
+    "#bbf7d0",  // Lighter green (200)
+    "#86efac",  // Light green (300)
+    "#4ade80",  // Medium green (400)
+    "#22c55e",  // Medium green (500)
+    "#16a34a",  // Dark green (600)
+    "#15803d",  // Darker green (700)
+    "#166534",  // Very dark green (900)
   ];
+
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
@@ -35,7 +36,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="relative h-8 w-16 border-l border-slate-700"
+          className="relative h-20 w-32 border-l border-slate-700"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -47,7 +48,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="relative h-8 w-16 border-t border-r border-slate-700"
+              className="relative h-20 w-32 border-t border-r border-slate-700"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -69,6 +70,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
           ))}
         </motion.div>
       ))}
+     
     </div>
   );
 };

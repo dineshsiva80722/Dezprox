@@ -16,7 +16,10 @@ export default function Thirdhome() {
             <div className="relative w-full flex items-center justify-center px-4 py-10 bg-white overflow-hidden">
                 {/* Border container */}
                 <Boxes className="" />
-                <div className="relative container mx-auto  max-w-5xl md:px-36 md:py-20 p-20 border border-[#3CB371] flex flex-col items-center text-center">
+                <div className="absolute -bottom-10 w-full bg-gradient-to-t from-white via-white to-transparent h-20">
+
+                </div>
+                <div className="relative container mx-auto bg-white/60  max-w-5xl md:px-36 md:py-20 p-20 border border-[#3CB371] flex flex-col items-center text-center">
                     {/* Green corner squares connected to border lines */}
                     <div className="absolute top-[-10px] left-[-8px] w-4 h-4 bg-[#3CB371]"></div>
                     <div className="absolute top-[-10px] right-[-8px] w-4 h-4 bg-[#3CB371]"></div>
