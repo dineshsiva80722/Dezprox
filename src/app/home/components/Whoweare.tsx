@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { TextGenerateEffect } from "@/Components/ui/text-generate-effect";
 import { motion, AnimatePresence } from "framer-motion";
+import { CalendarIcon as CalendarIconType } from 'lucide-react';
 
 
 const featureData = [
@@ -66,7 +67,7 @@ const featureData = [
     meetingNotes: "Marketing materials are finalized and will be shared with the team for feedback by Friday.",
   }
 ];
-const Whoweare = () => {
+const Whoweare: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   // Icon items 
   const iconItems = [
@@ -155,117 +156,120 @@ const Whoweare = () => {
           {/* <h1 className="text-[42px] font-semibold text-gray-900 mb-4 mt-2">
            
           </h1> */}
-          <TextGenerateEffect words="Suited for every scenario"  className="text-[42px] font-semibold text-gray-900 mb-4 mt-2"/>
+          <TextGenerateEffect words="Suited for every scenario" className="text-[42px] font-semibold text-gray-900 mb-4 mt-2" />
           <div className="text-gray-500 text-lg">
             Explore the comprehensive suite of tools designed to enhance your
           </div>
         </header>
 
         <div className="flex flex-wrap items-center justify-center bg-gray-100 md:justify-between w-full max-w-[1240px] mx-auto px-2 py-2 md:rounded-full rounded-lg ">
-        {iconItems.map((text, index) => (
-          <div
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`flex items-center gap-3 px-10 py-2 rounded-full cursor-pointer transition-all ${
-              activeIndex === index ? "bg-[#f6fff7] text-[#3fa740]" : "bg-transparent"
-            }`}
-          >
-            <div className="px-1 rounded-full flex items-center justify-center">
-              <CalendarIcon size={18} className="text-black" />
+          {iconItems.map((text, index) => (
+            <div
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`flex items-center gap-3 px-10 py-2 rounded-full cursor-pointer transition-all ${activeIndex === index ? "bg-[#f6fff7] text-[#3fa740]" : "bg-transparent"
+                }`}
+            >
+              <div className="px-1 rounded-full flex items-center justify-center">
+                <CalendarIconType
+                  size={16}
+                  className="text-black"
+                  aria-label="Calendar icon"
+                />
+              </div>
+              <div className={`${activeIndex === index ? "text-[#3fa740]" : "text-black"} text-sm font-medium`}>{text}</div>
             </div>
-            <div className={`${activeIndex === index ? "text-[#3fa740]" : "text-black"} text-sm font-medium`}>{text}</div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <section className="flex flex-col md:flex-row  justify-between md:mt-10 gap-[60px] flex-wrap md:items-start">
-      {/* Feature Content */}
-      <AnimatePresence mode="wait">
-        {featureData[activeIndex] && (
-          <motion.div
-          key={activeIndex}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 50 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-            className="flex-1 min-w-[300px] pt-5"
-          >
-            <div className="text-[#3fa740] text-2xl font-semibold mb-3">
-              {featureData[activeIndex].title}
-            </div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-4 mt-0">
-              {featureData[activeIndex].heading}
-            </h2>
-            <div className="text-gray-500 mb-6 leading-6">
-              {featureData[activeIndex].description}
-            </div>
-            <button className="flex items-center gap-2 text-gray-900 font-medium cursor-pointer bg-transparent border rounded-full px-4 py-2.5 shadow-md -ml-4 hover:bg-gray-50">
-              <span>Learn More</span>
-              <ArrowRightIcon />
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Calendar Card */}
-      <AnimatePresence mode="wait">
-        {featureData[activeIndex] && (
-          <motion.div
-          key={`image-${activeIndex}`}
-          initial={{ opacity: 0, x: -50, y: 50 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          exit={{ opacity: 0, x: 50, y: -50 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-            className="shadow-md w-[400px]  max-w-full bg-white p-[26px] mx-auto md:mx-0 rounded-xl border border-gray-100"
-          >
-            <div className="flex gap-4 mb-6">
-              <div className="flex flex-col items-center mt-1">
-                <div className="text-red-500 text-sm font-medium">
-                  {featureData[activeIndex].date.month}
-                </div>
-                <div className="text-2xl font-semibold text-gray-900">
-                  {featureData[activeIndex].date.day}
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="font-semibold text-gray-900 mb-1">
-                  {featureData[activeIndex].eventTitle}
-                </div>
-                <div className="text-gray-500 text-sm">
-                  {featureData[activeIndex].eventTime}
-                </div>
-              </div>
-              <div className="flex flex-col justify-between items-end h-[50px]">
-                <div className="flex items-center gap-2 text-gray-900 text-sm">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>{featureData[activeIndex].eventStatus}</span>
-                </div>
-                <div className="text-gray-900 text-xs bg-gray-100 px-[10px] py-1 rounded-xl font-medium flex items-center gap-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12L10 17L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  Going
-                </div>
-              </div>
-            </div>
-            <div className="pt-5 border-t border-gray-200">
-              <div className="font-semibold text-gray-900 mb-2">Meeting notes</div>
-              <div className="text-gray-500 text-sm leading-6 mb-5">
-                {featureData[activeIndex].meetingNotes}
-              </div>
-              <button
-                onClick={() => console.log("Join call clicked")}
-                className="w-full text-blue-500 bg-gray-100 py-3 rounded-lg border-none font-medium flex items-center justify-center gap-2.5 hover:bg-gray-200 transition-colors"
+        <section className="flex flex-col md:flex-row  justify-between md:mt-10 gap-[60px] flex-wrap md:items-start">
+          {/* Feature Content */}
+          <AnimatePresence mode="wait">
+            {featureData[activeIndex] && (
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="flex-1 min-w-[300px] pt-5"
               >
-                <VideoCallIcon />
-                Join the call
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
-    </div>
+                <div className="text-[#3fa740] text-2xl font-semibold mb-3">
+                  {featureData[activeIndex].title}
+                </div>
+                <h2 className="text-[32px] font-semibold text-gray-900 mb-4 mt-0">
+                  {featureData[activeIndex].heading}
+                </h2>
+                <div className="text-gray-500 mb-6 leading-6">
+                  {featureData[activeIndex].description}
+                </div>
+                <button className="flex items-center gap-2 text-gray-900 font-medium cursor-pointer bg-transparent border rounded-full px-4 py-2.5 shadow-md -ml-4 hover:bg-gray-50">
+                  <span>Learn More</span>
+                  <ArrowRightIcon />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Calendar Card */}
+          <AnimatePresence mode="wait">
+            {featureData[activeIndex] && (
+              <motion.div
+                key={`image-${activeIndex}`}
+                initial={{ opacity: 0, x: -50, y: 50 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                exit={{ opacity: 0, x: 50, y: -50 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="shadow-md w-[400px]  max-w-full bg-white p-[26px] mx-auto md:mx-0 rounded-xl border border-gray-100"
+              >
+                <div className="flex gap-4 mb-6">
+                  <div className="flex flex-col items-center mt-1">
+                    <div className="text-red-500 text-sm font-medium">
+                      {featureData[activeIndex].date.month}
+                    </div>
+                    <div className="text-2xl font-semibold text-gray-900">
+                      {featureData[activeIndex].date.day}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 mb-1">
+                      {featureData[activeIndex].eventTitle}
+                    </div>
+                    <div className="text-gray-500 text-sm">
+                      {featureData[activeIndex].eventTime}
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-between items-end h-[50px]">
+                    <div className="flex items-center gap-2 text-gray-900 text-sm">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span>{featureData[activeIndex].eventStatus}</span>
+                    </div>
+                    <div className="text-gray-900 text-xs bg-gray-100 px-[10px] py-1 rounded-xl font-medium flex items-center gap-1">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12L10 17L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      Going
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-5 border-t border-gray-200">
+                  <div className="font-semibold text-gray-900 mb-2">Meeting notes</div>
+                  <div className="text-gray-500 text-sm leading-6 mb-5">
+                    {featureData[activeIndex].meetingNotes}
+                  </div>
+                  <button
+                    onClick={() => console.log("Join call clicked")}
+                    className="w-full text-blue-500 bg-gray-100 py-3 rounded-lg border-none font-medium flex items-center justify-center gap-2.5 hover:bg-gray-200 transition-colors"
+                  >
+                    <VideoCallIcon />
+                    Join the call
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </section>
+      </div>
     </main>
   );
 };
