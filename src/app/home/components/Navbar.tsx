@@ -107,7 +107,7 @@ const Navbar = () => {
                     <rect width="17" height="18" fill="white" transform="translate(0 0.389999)" />
                   </clipPath>
                 </defs>
-              </svg> <span>Let's Talk</span>
+              </svg> <span>Let&apos;s Talk</span>
             </Button>
           </div>
         </div>
