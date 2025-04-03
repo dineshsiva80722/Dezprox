@@ -1,5 +1,5 @@
 import React from "react";
-import { TextGenerateEffect } from '@/Components/ui/Textgenerateeffect';
+import { TextGenerateEffect } from '@/Components/ui/text-generate-effect';
 import { ServiceCard } from "./ServiceCard";
 import { services } from "./data/services";
 
@@ -13,7 +13,6 @@ export default function Servicesmain() {
             <p className="text-green-600 font-medium text-center">Our Services</p>
             <TextGenerateEffect
               words="Suited for every scenario"
-              as="h1"
               className="text-4xl font-bold text-center mt-2"
             />
           </div>
