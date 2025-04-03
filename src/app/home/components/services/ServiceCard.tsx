@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { Card } from '@/components/ui/card';
 
-export const ServiceCard = ({ service }) => {
+export const ServiceCard = ({ service }: { service: any }) => {
   const StatsIcon = service.stats.icon;
   
   return (
