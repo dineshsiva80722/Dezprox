@@ -1,8 +1,25 @@
 import React from 'react'
+import Herosection from './components/Herosection'
+import Ourfeature from './components/Ourfeature'
+import Aboutsection from './components/Aboutsection'
+import Whoweare from './components/Whoweare'
+import Productsection from './components/Productsection'
+import Whychooseus from './components/Whychooseus'
+import Testimonialsection from './components/TestimonialSection'
+import Faqsection from './components/Faqsection'
 
-const page = () => {
+const Page = () => {
   return (
-    <div className='min-h-screen bg-zinc-500 text-white font-bold text-center flex justify-center items-center'>vercel</div>
+    <div className='min-h-screen'>
+      <Herosection />
+      <Ourfeature />
+      <Aboutsection />
+      <Whoweare />
+      <Productsection />
+      <Whychooseus />
+      <Testimonialsection />
+      <Faqsection/>
+    </div>
   )
 }
-export default page
+export default Page;
