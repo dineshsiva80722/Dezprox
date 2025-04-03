@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
 
-        <Image width={100} height={100} src="/Company_Logo.png" alt="Company Logo" className="h-8 w-auto sm:h-10" />
+        <Image width={100} height={100} src="https://res.cloudinary.com/do7dw5dwq/image/upload/v1743664757/Company_Logo_amynuq.png" alt="Company Logo" className="h-8 w-auto sm:h-10" />
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
